@@ -86,7 +86,7 @@ const menuItems = [
     // { listIcon: <HomeIcon />, listText: "Home", listPath: "/" },
     // { listIcon: <AssignmentIcon />, listText: "Resume", listPath: "/resume" },
     { listIcon: <AppsIcon />, listText: "Portfolio", listPath: "/" },
-    { listIcon: <ContactMailIcon />, listText: "Contact", listPath: "/contact" },
+    // { listIcon: <ContactMailIcon />, listText: "Contact", listPath: "/contact" },
 ];
 
 function Navigation() {
