@@ -16,7 +16,9 @@ const useStyles = makeStyles((theme) => ({
     },
     cardContainer: {
         maxWidth: 345,
-        margin: "3rem auto",
+        marginBottom: "3rem",
+        marginRight: "1rem",
+        marginLeft: "1rem"
     },
 }));
 
@@ -96,14 +98,14 @@ const Projects = () => {
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
-                            <CardActions>
+                            {/* <CardActions>
                                 <Button size="small" color="primary">
                                     Share
                                 </Button>
                                 <Button size="small" color="primary">
                                     Live Demo
                                 </Button>
-                            </CardActions>
+                            </CardActions> */}
                         </Card>
                     </Grid>
                 ))}

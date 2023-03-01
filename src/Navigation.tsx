@@ -1,6 +1,6 @@
 import * as React from "react"
 import { styled, Theme, CSSObject, ThemeProvider } from "@mui/material/styles";
-import { Box, CssBaseline, Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from "@mui/material";
+import { Box, colors, CssBaseline, Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import HomeIcon from '@mui/icons-material/Home';
@@ -83,10 +83,10 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 const menuItems = [
-    // { listIcon: <HomeIcon />, listText: "Home", listPath: "/" },
-    // { listIcon: <AssignmentIcon />, listText: "Resume", listPath: "/resume" },
-    { listIcon: <AppsIcon />, listText: "Portfolio", listPath: "/" },
-    // { listIcon: <ContactMailIcon />, listText: "Contact", listPath: "/contact" },
+    { listIcon: <HomeIcon color="secondary" />, listText: "Home", listPath: "/" },
+    { listIcon: <AssignmentIcon color="secondary" />, listText: "Resume", listPath: "/resume" },
+    { listIcon: <AppsIcon color="secondary" />, listText: "Portfolio", listPath: "/portfolio" },
+    { listIcon: <ContactMailIcon color="secondary" />, listText: "Contact", listPath: "/contact" },
 ];
 
 function Navigation() {
@@ -100,16 +100,16 @@ function Navigation() {
                 <AppBar position="fixed">
                     <Toolbar>
                         <IconButton edge="start" onClick={() => setOpen(!open)} sx={{ marginRight: 5, }}>
-                            <MenuIcon />
+                            <MenuIcon color="secondary" />
                         </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "secondary.main" }}>
                             Teresa's Portfolio
                         </Typography>
                     </Toolbar>
                 </AppBar>
                 <Drawer variant="permanent" open={open} PaperProps={{
                     sx: {
-                        backgroundColor: "secondary.light"
+                        backgroundColor: "primary.light"
                     }
                 }}>
                     <DrawerHeader />
@@ -119,6 +119,7 @@ function Navigation() {
                             <ListItem
                                 button
                                 key={i}
+                                sx={{ color: "secondary.main" }}
                                 onClick={() => {
                                     setOpen(false)
                                     navigate(item.listPath)

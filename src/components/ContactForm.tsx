@@ -6,7 +6,7 @@ const Contact = () => {
         <Box component="div">
             <Grid container justifyContent="center">
                 <Box component="form">
-                    <Typography variant="h5" color="primary.dark">
+                    <Typography variant="h5" color="primary.main">
                         Hire or Contact me
                     </Typography>
                     <TextField
@@ -34,7 +34,7 @@ const Contact = () => {
                         fullWidth={true}
                         endIcon={<Send />}
                         type="submit"
-                        sx={{ my: 1, bgcolor: "primary.main", color: "secondary.dark" }}
+                        sx={{ my: 1, bgcolor: "secondary", color: "primary.dark" }}
                     >
                         Contact Me
                     </Button>

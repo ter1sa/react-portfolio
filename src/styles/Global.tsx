@@ -1,17 +1,22 @@
 import { createTheme } from "@mui/material";
+import "@mui/material/styles";
+
+
+declare module '@mui/material/styles/createPalette' {
+    interface Palette {
+        bg?: Palette['primary'];
+    }
+    interface PaletteOptions {
+        bg?: PaletteOptions['primary'];
+    }
+}
 
 const theme = createTheme(
     {
         palette: {
-            primary: {
-                light: "#B7D3F2",
-                main: "#AFAFDC",
-                dark: "#8A84E2",
-            },
-            secondary: {
-                light: "#79BEEE",
-                main: "#84AFE6",
-            },
+            primary: { main: "#003a37" },
+            secondary: { main: "#e2dfd5" },
+            // bg: { main: "#e2dfd5" }
         },
         typography: {
             button: {
